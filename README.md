@@ -1,1 +1,1 @@
-# Mini-torch-
+# Mini-torch
