@@ -110,6 +110,9 @@ This is simply a collection of initializer methods that produces a **`np.ndarray
 
 i provide an implementation of `SGDTrainer` and please similarly implement one for `MomentumTrainer`, which is SGD with momentum.
 
+![image](https://github.com/user-attachments/assets/834dfc40-42c6-4df3-b78e-b9be0cfa57b3)
+
+
 - Notice that in this one, there can be some variations. You can implement according to this formula: `m <- mrate*m + (1-mrate)*g, p <- p - lrate * m`, but if you find something better feel free to use that as well.
 - Notice that for `update_sparse`, i still need to update the parameters if there are historical `m`, even if there are no gradients for the current step.
 - Please remember to clear gradients (by setting `p.grad=None`) at the end of `update`, similar to `SGDTrainer`.
@@ -117,6 +120,8 @@ i provide an implementation of `SGDTrainer` and please similarly implement one f
 
 ## OpLookup & OpDot & OpTanh & OpMax
 
+![image](https://github.com/user-attachments/assets/c49ff278-ed1b-46f0-bdaf-6c9311256834)
+**Look-up Table (Vocabulary)**
 - Implementation for the `forward` and `backward` methods for these `Op`s.
 - `OpLookup` represents a "lookup" operation, and accepts a `Tensor` matrix `W_emb` ([N,D]) and a list of word indexes ([n]), it returns another `Tensor` matrix ([n,D]).
 - `OpDot` represents a matrix multiplication, accepting a `Tensor` matrix `W` ([M,N]) and a `Tensor` vector ([N]), it returns another `Tensor` vector ([M]).
