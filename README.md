@@ -7,7 +7,7 @@
 0. [ComputationGraph](#ComputationGraph)
 0. [Initializer](#Initializer)
 0. [Model & Trainer](#Model-&-Trainer)
-0. [Tensor accumulate grad & Tensor accumulate grad sparse](#Tensor-accumulate-grad-&-Tensor-accumulate-grad-sparse)
+0. [Tensor gradients accumulation](#Tensor-gradients-accumulation)
 0. [Initializer xavier uniform](#Initializer-xavier-uniform)
 0. [MomentumTrainer](#MomentumTrainer)
 0. [OpLookup & OpDot & OpTanh & OpMax](#OpLookup-&-OpDot-&-OpTanh-&-OpMax)
@@ -92,7 +92,7 @@ This is simply a collection of initializer methods that produces a **`np.ndarray
 - Finally, there are some shortcut functions to make it more convenient.
 
 
-## Tensor accumulate grad & Tensor accumulate grad sparse
+## Tensor gradients accumulation
  
 **Tensor.accumulate_grad & Tensor.accumulate_grad_sparse**
 - `accumulate_grad` accepts one (dense) `np.ndarray` and accumulate to the `Tensor`'s dense gradients (`np.ndarray`).
