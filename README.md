@@ -93,8 +93,8 @@ This is simply a collection of initializer methods that produces a **`np.ndarray
 
 
 ## Tensor accumulate grad & Tensor accumulate grad sparse
-### Tensor.accumulate_grad & Tensor.accumulate_grad_sparse
-
+ 
+**Tensor.accumulate_grad & Tensor.accumulate_grad_sparse**
 - `accumulate_grad` accepts one (dense) `np.ndarray` and accumulate to the `Tensor`'s dense gradients (`np.ndarray`).
 - `accumulate_grad_sparse` accepts a list of (index, `np.ndarray`) and accumulates them to the `Tensor`'s simulated sparase gradients (`dict`).
 - i will check the gradients before and after these methods. Notice that i reuse the `Tensor.grad` for both dense and (simulated) sparse gradients, thus please do not apply both at the same time. (See also `get_dense_grad` of how to convert from simulated sparse gradients to dense ones.)
