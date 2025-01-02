@@ -15,9 +15,9 @@ Computational Grahps in Pytorch
 
 ## **np**
 
-`np` is an alias for the numerical processing library that i will be using to make computation efficient. By default i use [numpy](https://numpy.org/), a widely used numerical library that you may know of already. For brief tutorials, you can check the links provided at the end of this page. Alternatively, you can use `cupy`, an interface that is basically identical to `numpy`, but allows computation on the GPU, which can be useful for speed purposes.
+**`np`** is an alias for the numerical processing library that i will be using to make computation efficient. By default i use [numpy](https://numpy.org/), a widely used numerical library that you may know of already. For brief tutorials, you can check the links provided at the end of this page. Alternatively, you can use **`cupy`**, an interface that is basically identical to **`numpy`**, but allows computation on the GPU, which can be useful for speed purposes.
 
-- For this project using `numpy` with CPU will already be fast enough (around 6s per iter in our running). In my final testing, i would probably use `numpy`.  
+- For this project using **`numpy`** with CPU will already be fast enough (around 6s per iter in our running). In my final testing, i would probably use **`numpy`**.  
 
 
 ## **Tensor**
@@ -48,6 +48,9 @@ This class implements an operation that is part of a **`ComputationGraph`**.
 ## **ComputationGraph**
 
 This class is the one that keeps track of the current computational graph.
+
+![cg_torh](https://github.com/user-attachments/assets/ea466abd-a74f-48b3-a62d-1c6d05eb9f89)
+
 
 - It simply contains a list of **`Op`**s, which are registered in **`Op.__init__`**.
 - In forward, these **`Op`** are appended incrementally in calculation order, and in backward (see function **`backward`**, they are visited in reversed order).
