@@ -24,6 +24,10 @@ Computational Grahps in Pytorch
 
 The **`Tensor`** class is a Tensor data structure, with the underlying data stored in a multidimensional array.
 
+
+![tweaking_nn](https://github.com/user-attachments/assets/237ef635-7d13-4fbb-9499-3feb81155725)
+
+
 - This class is very similar to **`torch.Tensor`**.
 - **`Tensor.data`** is the field that contains the main data for this tensor, this field is a **`np.ndarray`**. The updates of the parameters should be directly changing this data.
 - **`Tensor.grad`** is the field for storing the gradient for this tensor. There can be three types of values for this field:
