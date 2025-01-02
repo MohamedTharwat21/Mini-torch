@@ -1,7 +1,5 @@
 # Mini-torch
-## A designed and customized lightweight neural network library, replicating core PyTorch functionalities.
-
-
+ 
 ## Here is a walk-through of the main classes in `minnn.py`.
 0. [np](#np)
 0. [Tensor](#Tensor)
