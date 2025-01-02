@@ -17,8 +17,8 @@ Computational Grahps in Pytorch
 
 **`np`** is an alias for the numerical processing library that i will be using to make computation efficient. By default i use [numpy](https://numpy.org/), a widely used numerical library that you may know of already. For brief tutorials, you can check the links provided at the end of this page. Alternatively, you can use **`cupy`**, an interface that is basically identical to **`numpy`**, but allows computation on the GPU, which can be useful for speed purposes.
 
-- CuPy is an open-source Python library designed for fast and efficient numerical computations on NVIDIA GPUs. It provides an interface that is highly compatible with NumPy, making it easy to switch between CPU-based (NumPy) and GPU-based (CuPy) implementations of numerical code with minimal changes. CuPy accelerates computational tasks by leveraging CUDA, NVIDIA's parallel computing architecture.
-- 
+- **CuPy** is an open-source Python library designed for fast and efficient numerical computations on NVIDIA GPUs. It provides an interface that is highly compatible with NumPy, making it easy to switch between CPU-based (NumPy) and GPU-based (CuPy) implementations of numerical code with minimal changes. CuPy accelerates computational tasks by leveraging **CUDA, NVIDIA's parallel computing architecture**.
+  
 - For this project using **`numpy`** with CPU will already be fast enough (around 6s per iter in our running). In my final testing, i would probably use **`numpy`**.  
 
 
