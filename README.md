@@ -121,8 +121,8 @@ i provide an implementation of `SGDTrainer` and please similarly implement one f
 ## OpLookup & OpDot & OpTanh & OpMax
 
 ![lookup_table](https://github.com/user-attachments/assets/d4c30083-3372-45cf-8d49-e872cb4e309a)
+**img : Look-up Table (Vocabulary)**
 
-**Look-up Table (Vocabulary)**
 
 - Implementation for the `forward` and `backward` methods for these `Op`s.
 - `OpLookup` represents a "lookup" operation, and accepts a `Tensor` matrix `W_emb` ([N,D]) and a list of word indexes ([n]), it returns another `Tensor` matrix ([n,D]).
