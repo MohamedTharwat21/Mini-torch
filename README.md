@@ -7,8 +7,8 @@
 0. [ComputationGraph](#ComputationGraph)
 0. [Initializer](#Initializer)
 0. [Model & Trainer](#Model-&-Trainer)
-0. [Tensor.accumulate grad & Tensor.accumulate grad sparse](#Tensor.accumulate-grad-&-Tensor.accumulate-grad_sparse)
-0. [Initializer.xavier uniform](#Initializer.xavier-uniform)
+0. [Tensor accumulate grad & Tensor accumulate grad sparse](#Tensor-accumulate-grad-&-Tensor-accumulate-grad-sparse)
+0. [Initializer xavier uniform](#Initializer-xavier-uniform)
 0. [MomentumTrainer](#MomentumTrainer)
 0. [OpLookup & OpDot & OpTanh & OpMax](#OpLookup-&-OpDot-&-OpTanh-&-OpMax)
 0. [Other Notes](#Other-Notes)
@@ -92,14 +92,16 @@ This is simply a collection of initializer methods that produces a **`np.ndarray
 - Finally, there are some shortcut functions to make it more convenient.
 
 
-## Tensor.accumulate_grad & Tensor.accumulate_grad_sparse
+## Tensor accumulate grad & Tensor accumulate grad sparse
+### Tensor.accumulate_grad & Tensor.accumulate_grad_sparse
 
 - `accumulate_grad` accepts one (dense) `np.ndarray` and accumulate to the `Tensor`'s dense gradients (`np.ndarray`).
 - `accumulate_grad_sparse` accepts a list of (index, `np.ndarray`) and accumulates them to the `Tensor`'s simulated sparase gradients (`dict`).
 - i will check the gradients before and after these methods. Notice that i reuse the `Tensor.grad` for both dense and (simulated) sparse gradients, thus please do not apply both at the same time. (See also `get_dense_grad` of how to convert from simulated sparse gradients to dense ones.)
 
 
-## Initializer.xavier_uniform
+## Initializer xavier uniform
+### Initializer.xavier_uniform
 
 - This accepts inputs of `shape` and `gain`, and outputs a `np.ndarray` where the shape is `shape`. (`gain` simply means that finally i are scaling the weights by this value.)
 - See `Understanding the difficulty of training deep feedforward neural networks - Glorot, X. & Bengio, Y. (2010)` for details about Xavier/Glorot initialization, and this blog for [more details about initialization in general](https://towardsdatascience.com/weight-initialization-in-neural-networks-a-journey-from-the-basics-to-kaiming-954fb9b47c79).
