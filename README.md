@@ -52,7 +52,7 @@ This class is the one that keeps track of the current computational graph.
 ![cg_torh](https://github.com/user-attachments/assets/ea466abd-a74f-48b3-a62d-1c6d05eb9f89)
 
 
-- It simply contains a list of **`Op`**s, which are registered in **`Op.__init__`**.
+- It simply contains a list of **`Op`** s, which are registered in **`Op.__init__`**.
 - In forward, these **`Op`** are appended incrementally in calculation order, and in backward (see function **`backward`**, they are visited in reversed order).
 
 ## Initializer
