@@ -80,8 +80,3 @@ This is simply a collection of initializer methods that produces a **`np.ndarray
 - The remaining **`Op*`** are all sub-classes of **`Op`** and denotes a specific function. i provide some operations and ask you to implement some of them.
 - Take **`OpDropout`** as an example, here i implement the inverted dropout, which scales values by **`1/(1-drop)`** in forward. In **`forward`**, (if training), i obtain a **`mask`** using **`np.random`** and multiply the input by this. All the intermediate values (including input and output) are stored using **`store_ctx`**. In **`backward`**, i obtain the graident of the output **`Tensor`** by retriving previous stored values. Then the calcualted gradients are assigned to the input **`Tensor`** by accumulate_grad.
 - Finally, there are some shortcut functions to make it more convenient.
-
-
-
-
-![lookup_table](https://github.com/user-attachments/assets/06eb8fcd-8475-47b7-8202-de3f0d739e74)
